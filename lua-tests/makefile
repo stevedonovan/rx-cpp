@@ -8,6 +8,8 @@ RXDEPS=$(RX)/librx.a $(RX)/rx.h
 CXXFLAGS=-std=c++0x -Wall $(OPT) -I$(RX)
 LDLIBS=-L$(RX) -lrx
 
+CXXFLAGS+=-DNO_POSIX
+
 TESTS=rx-testl rx-matchl
 
 all: $(TESTS)
